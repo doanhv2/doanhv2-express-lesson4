@@ -29,7 +29,10 @@ app.get('/todos', (request, response) => {
 
 app.post('/todos/create', (request, response) => {
   console.log(request.body);
-  todos.push()
+  if(request.body.todo){
+    todos.push(request.body.todo);
+  }
+  response.redirect('back');
 });
 
 // listen for requests :)
