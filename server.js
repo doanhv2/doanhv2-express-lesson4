@@ -14,7 +14,13 @@ app.get('/', (request, response) => {
 });
 
 app.get('/todos', (request, response) => {
-  response.render('todos');
+  let todos = [
+    'Đi chợ',
+    'Nấu cơm',
+    'Rửa bát',
+    'Học code tại CodersX'
+  ]
+  response.render('todos', { todos: todos});
 });
 
 // listen for requests :)
