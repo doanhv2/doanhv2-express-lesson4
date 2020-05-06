@@ -5,10 +5,16 @@
 // but feel free to use whatever libraries or frameworks you'd like through `package.json`.
 const express = require('express');
 const app = express();
+app.set('view engine', 'pug')
+app.set('view engine', 'pug')
 
 // https://expressjs.com/en/starter/basic-routing.html
 app.get('/', (request, response) => {
   response.send('I love CodersX');
+});
+
+app.get('/todos', (request, response) => {
+  response.render('todos');
 });
 
 // listen for requests :)
